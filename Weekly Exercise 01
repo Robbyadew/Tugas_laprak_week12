@@ -1,0 +1,35 @@
+def l_lingkaran(n):
+    return 3.14 * n * n
+
+def l_persegi(n):
+    return n * n
+
+def l_segitiga(alas, tinggi):
+    return (alas * tinggi) / 2
+
+
+while True:
+    perhitungan = input('pilih salah satu perhitngan \n1. luas lingkaran, \n2. luas persegi, \n3. luas segitiga, \n4. selesai/enter untuk keluar:').lower()
+    if perhitungan == "luas lingkaran" or perhitungan == "1":
+        try:
+          jari_jari = int(input(" masukkan panjang jari-jari: "))
+          print(l_lingkaran(jari_jari))
+        except:
+          print("error")
+    elif perhitungan == "luas persegi" or perhitungan == "2":
+        try:
+          sisi = int(input('masukkan panjang sisi: '))
+          print(l_persegi(sisi))
+        except:
+          print("error")
+    elif perhitungan == "luas segitiga" or perhitungan == "3":
+        try:
+          alas = int(input('masukkan panjang alas: '))
+          tinggi = int(input('masukkan panjang tinggi: '))
+          print(l_segitiga(alas, tinggi))
+        except:
+          print("error")
+    elif perhitungan == "selesai" or perhitungan == False or perhitungan == "4":
+        break
+    else:
+        print('pilih salah satu')
